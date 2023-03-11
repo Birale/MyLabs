@@ -4,7 +4,7 @@ int main() {
     int n,j,i,r;
     printf("Enter the dimension of the matrix: ");
     scanf("%d", &n);
-    
+    double matrix2[n][n];
     double matrix[n][n];
     printf("Enter the values of the matrix:\n");
     for(int i=0; i<n; i++) {
@@ -21,7 +21,6 @@ int main() {
     printf("Sum of elements on main diagonal: %lf\n", sum1);
     printf("Sum of elements on secondary diagonal: %lf\n", sum2);
     
-    double matrix2[n][n];
     
     printf("\nKvadrat matrici:\n");
 
