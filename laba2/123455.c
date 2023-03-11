@@ -21,20 +21,25 @@ int main() {
     printf("Sum of elements on main diagonal: %lf\n", sum1);
     printf("Sum of elements on secondary diagonal: %lf\n", sum2);
     
-    double matrix2[n][n];
+    int matrix2[n][n],matrix3[i][j];
+    printf("Enter the values of the matrix:\n");
+    for(int i=0; i<n; i++) {
+        for(int j=0; j<n; j++) {
+            scanf("%d", &matrix2[i][j]);
+        }
+    }
     
     printf("\nKvadrat matrici:\n");
-
     for (i = 0; i < n; i++)
         for (j = 0; j < n; j++)
             for (r = 0; r < n; r++)
-                matrix2[i][j] += matrix[i][r] * matrix[r][j];
-
+                matrix3[i][j] += matrix2[i][r] * matrix2[r][j];
+                
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++)
         {
-            printf("%lf\t", matrix2[i][j]);
+            printf("%d\t", matrix3[i][j]);
         }
         printf("\n");
     }
