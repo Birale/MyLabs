@@ -1,6 +1,6 @@
 [Project]
-filename=lab4.dev
-name=lab4
+filename=lab6.dev
+name=lab6
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=Function.h
+FileName=main.c
 CompileCpp=0
 Folder=
 Compile=1
