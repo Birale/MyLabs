@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <locale.h>
 int main()
 {
@@ -12,23 +14,29 @@ int main()
         return 1;
     }
 
-    const int max_line_length = 100;
+    const int max_line_length = 256;
 
     char line[max_line_length];
-    char I[50], F[50], O[50];
-	int R;
+    char *pch;
+    int year_of_birth; 
+
     while (fgets(line, max_line_length, input_file) != NULL)
     {
-        sscanf(line, "%s %s %s %d", I, F, O, &R);
+        pch = strchr(line, ' '); 
 
-        if (R > 1980)
+        if (pch != NULL) 
         {
-            fprintf(output_file, "%s %s %s %d\n", I, F, O, R);
+            year_of_birth = atoi(pch+1);
+
+            if (year_of_birth > 1980) 
+            {
+                fprintf(output_file, "%s", line);
+            }
         }
     }
 
-    fclose(input_file);
+    fclose(input_file); 
     fclose(output_file);
 
-    return 0;
+    return 0; 
 }

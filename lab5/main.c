@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include ""
+#include "func.h"
+int i, j, k;
 
 int main() {
     int n, i;
